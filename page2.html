@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия ИИ: Часть 2</title>
+    <style>
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .box { max-width: 650px; margin: 0 auto; background-color: #161b26; padding: 25px; border-radius: 12px; border: 1px solid #2d3748; }
+        h1 { text-align: center; color: #fff; margin-bottom: 20px; border-bottom: 2px solid #00ffaa; padding-bottom: 15px; font-size: 1.6rem; }
+        h2 { color: #00ffaa; font-size: 1.3rem; margin-bottom: 15px; }
+        h3 { color: #38bdf8; margin-top: 15px; font-size: 1.1rem; }
+        p { color: #cbd5e1; margin-bottom: 12px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 6px; }
+        .pic { width: 100%; height: 130px; background: linear-gradient(135deg, #1c0a35, #0f172a); border-radius: 8px; margin: 15px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #ffd700; }
+        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #2d3748; }
+        .opt { display: block; background: #161b26; padding: 12px; border-radius: 6px; margin-bottom: 8px; cursor: pointer; border: 1px solid #2d3748; }
+        .opt input { margin-right: 10px; }
+        .msg { display: none; margin-top: 10px; padding: 10px; border-radius: 4px; font-weight: bold; }
+        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.1); color: #00ffaa; border: 1px solid #00ffaa; }
+        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.1); color: #ff4a4a; border: 1px solid #ff4a4a; }
+        .btn-flex { display: flex; justify-content: space-between; margin-top: 25px; gap: 15px; }
+        .btn-link { display: block; width: 48%; padding: 12px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Академия ИИ: Полное обучение</h1>
+
+        <!-- ШАГ 3 -->
+        <span style="background:#2563eb; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold;">Шаг 3 из 5</span>
+        <h2>3. Глубокая логика и рассуждения в DeepSeek R1</h2>
+        <div class="pic">🧠 [Логический цикл Reasoning в DeepSeek]</div>
+        <p>Модели класса Reasoning (Рассуждающие), такие как DeepSeek R1, перед выводом ответа запускают внутренний мыслительный цикл. Она анализирует задачу и проверяет саму себя на ошибки.</p>
+        <ul>
+            <li>Никогда не требуйте краткости сразу. Дайте модели сначала полностью расписать логику.</li>
+            <li>Загружайте сырые финансовые отчеты или сложный код целиком — модель сама выстроит цепочку проверок.</li>
+        </ul>
+        <div class="quiz">
+            <p><strong>Практический тест к Шагу 3:</strong></p><br>
+            <label class="opt no"><input type="radio" name="ans3"> Главная фишка DeepSeek R1 — создание картинок.<div class="msg">❌ Неверно. Это текстовая модель.</div></label>
+            <label class="opt yes"><input type="radio" name="ans3"> Модель пошагово анализирует свои гипотезы перед ответом.<div class="msg">🎉 Точно! Это позволяет ей решать задачи экспертного уровня.</div></label>
+        </div>
+
+        <br><hr style="border-color:#2d3748;"><br>
+
+        <!-- ШАГ 4 -->
+        <span style="background:#2563eb; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold;">Шаг 4 из 5</span>
+        <h2>4. Режиссура кадра и коммерческая графика в Midjourney</h2>
+        <div class="pic" style="background: linear-gradient(135deg, #2d0b25, #11051c);">🎨 [Управление графикой и стилем бренда]</div>
+        <p>В коммерческом дизайне заказчики требуют точного соблюдения фирменного стиля. Для этого в Midjourney применяется продвинутый синтаксис параметров.</p>
+        <ul>
+            <li><b>Параметр формата AR 16:9</b> — делает изображение широкоформатным для сайтов.</li>
+            <li><b>Параметр стиля SREF</b> — полностью копирует цвета и свет с картинки-примера заказчика.</li>
+            <li><b>Параметр персонажа CREF</b> — удерживает лицо одного человека на разных генерациях рекламы.</li>
+        </ul>
+        <div class="quiz">
+            <p><strong>Практический тест к Шагу 4:</strong></p><br>
+            <label class="opt yes"><input type="radio" name="ans4"> Параметр SREF с ссылкой на стиль.<div class="msg">🎉 Верно! Использование SREF гарантирует точное копирование стиля.</div></label>
+            <label class="opt no"><input type="radio" name="ans4"> Параметр формата AR 16:9.<div class="msg">❌ Нет. Этот параметр отвечает только за форму кадра.</div></label>
+        </div>
+
+        <div class="btn-flex">
+            <a href="index.html" class="btn-link" style="background-color: #2d3748; color: #fff; border: 1px solid #4a5568;">← Назад</a>
+            <a href="page3.html" class="btn-link" style="background-color: #2563eb; color: #fff;">Далее (Шаг 5 и Практика) →</a>
+        </div>
+    </div>
+</body>
+</html>

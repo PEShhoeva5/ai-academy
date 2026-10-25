@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия ИИ: Часть 3</title>
+    <style>
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .box { max-width: 650px; margin: 0 auto; background-color: #161b26; padding: 25px; border-radius: 12px; border: 1px solid #2d3748; }
+        h1 { text-align: center; color: #fff; margin-bottom: 20px; border-bottom: 2px solid #00ffaa; padding-bottom: 15px; font-size: 1.6rem; }
+        h2 { color: #00ffaa; font-size: 1.3rem; margin-bottom: 15px; }
+        h3 { color: #38bdf8; margin-top: 15px; font-size: 1.1rem; }
+        p { color: #cbd5e1; margin-bottom: 12px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 6px; }
+        .pic { width: 100%; height: 130px; background: linear-gradient(135deg, #022c22, #064e3b); border-radius: 8px; margin: 15px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #00ffaa; }
+        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #2d3748; }
+        .opt { display: block; background: #161b26; padding: 12px; border-radius: 6px; margin-bottom: 8px; cursor: pointer; border: 1px solid #2d3748; }
+        .opt input { margin-right: 10px; }
+        .msg { display: none; margin-top: 10px; padding: 10px; border-radius: 4px; font-weight: bold; }
+        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.1); color: #00ffaa; border: 1px solid #00ffaa; }
+        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.1); color: #ff4a4a; border: 1px solid #ff4a4a; }
+        .prompt-input { width: 100%; height: 80px; background: #161b26; border: 1px solid #2d3748; border-radius: 6px; color: #fff; padding: 12px; font-size: 0.95rem; margin-top: 10px; resize: none; }
+        .tips-box { background: #161b26; padding: 15px; border-radius: 6px; border-left: 4px solid #38bdf8; margin-top: 12px; font-size: 0.9rem; color: #cbd5e1; }
+        .btn-flex { display: flex; justify-content: space-between; margin-top: 25px; gap: 15px; }
+        .btn-link { display: block; width: 48%; padding: 12px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Академия ИИ: Полное обучение</h1>
+
+        <!-- ШАГ 5 -->
+        <span style="background:#2563eb; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold;">Шаг 5 из 5</span>
+        <h2>5. Коммерциализация навыков и выполнение платных заказов</h2>
+        <div class="pic">💎 [Карта заработка ИИ-специалиста]</div>
+        <p>Вы прошли всю цепочку обучения от А до Я. Пора переходить к заработку на фрилансе и автоматизации процессов компаний.</p>
+        <ul>
+            <li><b>Фриланс-биржи:</b> Создайте карточки услуг: Написание статей через ИИ, Генерация карточек товаров.</li>
+            <li><b>Прямые продажи:</b> Сделайте для клиента быстрый тестовый баннер через ИИ бесплатно и покажите результат. Бизнес охотно купит у вас ведение соцсетей.</li>
+        </ul>
+        <div class="quiz">
+            <p><strong>Практический тест к Шагу 5:</strong></p><br>
+            <label class="opt no"><input type="radio" name="ans5"> Долго рассылать всем текстовые прайс-листы.<div class="msg">❌ Неверно. Прайс-листы без примера работы не эффективны.</div></label>
+            <label class="opt yes"><input type="radio" name="ans5"> Сделать для клиента быстрый бесплатный тестовый результат через ИИ и показать его живьем.<div class="msg">🎉 Поздравляем! Вы прошли весь курс обучения, все тесты и готовы зарабатывать!</div></label>
+        </div>
+
+        <br><hr style="border-color:#2d3748;"><br>
+
+        <!-- ПРАКТИКА -->
+        <span style="background:#38bdf8; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold; color:#000;">Финал</span>
+        <h2>Финальный практикум: Песочница ИИ-Промтов</h2>
+        <p>Примените теорию на практике. Ознакомьтесь с реальным ТЗ от заказчика и напишите свой первый рабочий промт в поле ввода ниже.</p>
+        
+        <div class="quiz" style="background:#161b26; border-color:#38bdf8;">
+            <p style="color:#38bdf8;">📋 ТЗ от заказчика:</p>
+            <div class="tips-box">
+                Создать рекламный баннер для кофейни. На изображении должна быть чашка горячего капучино на деревянном столе, мягкий утренний свет из окна. Формат кадра должен быть широким.
+            </div>
+            <h3 style="margin-top:15px; margin-bottom:5px;">Поле ввода вашего промта:</h3>
+            <textarea class="prompt-input" placeholder="Напишите сюда ваше ТЗ для ИИ. Пример: Профессиональный фотограф, чашка кофе на столе, утренний свет, параметр стиля SREF, параметр формата AR 16:9..."></textarea>
+        </div>
+
+        <div class="btn-flex">
+            <a href="page2.html" class="btn-link" style="background-color: #2d3748; color: #fff; border: 1px solid #4a5568;">← Назад</a>
+            <a href="index.html" class="btn-link" style="background-color: #00ffaa; color: #000;" onclick="alert('Вы успешно прошли весь курс! Теперь вы можете повторить обучение с самого начала.')">В начало курса ↑</a>
+        </div>
+    </div>
+</body>
+</html>
