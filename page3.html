@@ -24,6 +24,12 @@
         .tips-box { background: #161b26; padding: 15px; border-radius: 6px; border-left: 4px solid #38bdf8; margin-top: 12px; font-size: 0.9rem; color: #cbd5e1; }
         .btn-flex { display: flex; justify-content: space-between; margin-top: 25px; gap: 15px; }
         .btn-link { display: block; width: 48%; padding: 12px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; }
+        
+        /* Стили нового золотого блока сертификата */
+        .cert-card { background: linear-gradient(135deg, #1e1b10, #111e38); border: 2px solid #ffd700; padding: 25px; border-radius: 10px; text-align: center; margin-top: 35px; box-shadow: 0 0 15px rgba(255, 215, 0, 0.1); }
+        .cert-medal { font-size: 3.5rem; text-shadow: 0 0 15px #ffd700; margin-bottom: 10px; }
+        .cert-btn { display: block; background-color: #ffd700; color: #000; font-weight: bold; text-decoration: none; padding: 12px; border-radius: 6px; font-size: 1rem; margin-top: 15px; transition: 0.2s; }
+        .cert-btn:hover { opacity: 0.9; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
     </style>
 </head>
 <body>
@@ -59,6 +65,17 @@
             </div>
             <h3 style="margin-top:15px; margin-bottom:5px;">Поле ввода вашего промта:</h3>
             <textarea class="prompt-input" placeholder="Напишите сюда ваше ТЗ для ИИ. Пример: Профессиональный фотограф, чашка кофе на столе, утренний свет, параметр стиля SREF, параметр формата AR 16:9..."></textarea>
+        </div>
+
+        <!-- НОВЫЙ БЛОК СЕРТИФИКАТА -->
+        <div class="cert-card">
+            <div class="cert-medal">👑</div>
+            <h2 style="color: #ffd700; margin-bottom: 10px;">Вы заслужили Сертификат Выпускника!</h2>
+            <p style="font-size: 0.95rem; color: #e2e8f0;">Вы успешно прошли все теоретические шаги, закрепили знания интерактивными тестами и выполнили выпускную практическую работу в ИИ-песочнице.</p>
+            <p style="font-size: 0.9rem; color: #ffd700; font-weight: bold; margin-top: 5px;">Ваш статус: Сертифицированный Специалист по Нейросетям ПРО</p>
+            
+            <!-- Позже сюда можно будет вставить ссылку на вашу личную анкету, почту или форму оплаты -->
+            <a href="#" class="cert-btn" onclick="alert('Поздравляем! Заявка на оформление вашего именного электронного сертификата успешно создана.')">Скачать именной сертификат</a>
         </div>
 
         <div class="btn-flex">
