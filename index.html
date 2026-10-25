@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия ИИ: Полный курс</title>
+    <style>
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        header { text-align: center; border-bottom: 2px solid #00ffaa; padding-bottom: 20px; margin-bottom: 20px; }
+        h1 { color: #fff; }
+        h2 { color: #00ffaa; margin-top: 30px; border-bottom: 1px solid #2d3748; padding-bottom: 5px; }
+        h3 { color: #38bdf8; margin-top: 15px; }
+        .block { background-color: #161b26; padding: 25px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #2d3748; }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 5px; }
+        .quiz { background-color: #0f172a; padding: 20px; border-radius: 6px; margin-top: 20px; border: 1px solid #00ffaa; }
+        .btn { background-color: #00ffaa; color: #000; border: none; padding: 10px 20px; font-weight: bold; border-radius: 4px; cursor: pointer; margin-top: 15px; }
+        .res { margin-top: 15px; font-weight: bold; display: none; padding: 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ПРО-Академия ИИ: Полный курс</h1>
+        <p>Практическое руководство по нейросетям от А до Я</p>
+    </header>
+
+    <!-- МОДУЛЬ 1 -->
+    <div class="block">
+        <h2>Модуль 1: Математическая природа генеративного ИИ</h2>
+        <p>ИИ не понимает смысл текста как человек. Любая современная модель — это сложнейший статистический калькулятор.</p>
+        <h3>Как это работает на практике:</h3>
+        <p>Когда вы вводите фразу, ИИ разбивает ее на токены и рассчитывает распределение вероятностей для следующего слова на основе терабайтов прочитанных текстов.</p>
+        <h3>Инструменты под задачи:</h3>
+        <ul>
+            <li>LLM: Аналитика и тексты (Claude, GPT, DeepSeek).</li>
+            <li>Графика: Качество и фотореализм (Midjourney, Flux).</li>
+            <li>Видео: Физика движения (Kling AI, Runway).</li>
+        </ul>
+        
+        <div class="quiz">
+            <p><strong>Тест 1: Что делает ИИ при генерации текста?</strong></p>
+            <br>
+            <input type="radio" name="q1" id="q1_1"> Выражает личные чувства и мысли.<br><br>
+            <input type="radio" name="q1" id="q1_2"> Рассчитывает вероятности последовательности слов.<br><br>
+            <button class="btn" onclick="var r=document.getElementById('r1'); r.style.display='block'; if(document.getElementById('q1_2').checked){ r.style.color='#00ffaa'; r.innerText='Правильно!'; }else{ r.style.color='#ff4a4a'; r.innerText='Неверно. Попробуйте еще раз.'; }">Проверить ответ</button>
+            <div id="r1" class="res"></div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 2 -->
+    <div class="block">
+        <h2>Модуль 2: Промт-инжиниринг и логика DeepSeek R1</h2>
+        <p>Профессиональный промт требует четкой структуры: Роль плюс Задача плюс Примеры плюс Формат вывода.</p>
+        <h3>Глубокое погружение в DeepSeek R1:</h3>
+        <p>Модели нового поколения перед выдачей ответа запускают скрытый внутренний цикл размышлений.</p>
+        <ul>
+            <li>Правило: Не требуйте краткости сразу. Дайте модели подумать в цикле рассуждений.</li>
+            <li>Ввод данных: Загружайте технические тексты и логи ошибок целиком, используя явные разделители.</li>
+        </ul>
+        
+        <div class="quiz">
+            <p><strong>Тест 2: В чем главная фишка DeepSeek R1?</strong></p>
+            <br>
+            <input type="radio" name="q2" id="q2_1"> Использует цикл пошаговых логических размышлений перед ответом.<br><br>
+            <input type="radio" name="q2" id="q2_2"> Умеет рисовать картинки прямо внутри чата.<br><br>
+            <button class="btn" onclick="var r=document.getElementById('r2'); r.style.display='block'; if(document.getElementById('q2_1').checked){ r.style.color='#00ffaa'; r.innerText='Правильно!'; }else{ r.style.color='#ff4a4a'; r.innerText='Неверно. Попробуйте еще раз.'; }">Проверить ответ</button>
+            <div id="r2" class="res"></div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 3 -->
+    <div class="block">
+        <h2>Модуль 3: Коммерческая режиссура в Midjourney и Flux</h2>
+        <p>Генерация изображений требует точного синтаксиса управления стилем, светом и композицией кадра.</p>
+        <h3>Секретные параметры:</h3>
+        <ul>
+            <li>--cref: Сохраняет лицо персонажа из одной генерации в другую (удержание персонажа).</li>
+            <li>--sref: Копирует стиль, цвета и текстуру с референса.</li>
+            <li>--ar 16:9: Задает широкоформатный формат кадра.</li>
+        </ul>
+        
+        <div class="quiz">
+            <p><strong>Тест 3: Какой параметр удерживает лицо персонажа?</strong></p>
+            <br>
+            <input type="radio" name="q3" id="q3_1"> Параметр --sref<br><br>
+            <input type="radio" name="q3" id="q3_2"> Параметр --cref<br><br>
+            <button class="btn" onclick="var r=document.getElementById('r3'); r.style.display='block'; if(document.getElementById('q3_2').checked){ r.style.color='#00ffaa'; r.innerText='Правильно!'; }else{ r.style.color='#ff4a4a'; r.innerText='Неверно. Попробуйте еще раз.'; }">Проверить ответ</button>
+            <div id="r3" class="res"></div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 4 -->
+    <div class="block">
+        <h2>Модуль 4: Мультимодельный конвейер производства (SYNTX.AI)</h2>
+        <p>Профессионалы собирают воркфлоу (конвейеры) из нескольких специализированных ИИ для создания одного продукта.</p>
+        <h3>Пошаговый конвейер производства рекламы:</h3>
+        <ol>
+            <li>Сценарий: Текст генерируется в Claude или DeepSeek.</li>
+            <li>Визуализация: Кадры создаются во Flux или Midjourney в едином стиле.</li>
+            <li>Анимация: Картинки оживают в видео-моделях Kling AI или Runway.</li>
+            <li>Звук: Озвучка создается в ElevenLabs, музыка в Suno.</li>
+        </ol>
+        
+        <div class="quiz">
+            <p><strong>Тест 4: Что такое мультимодельный подход?</strong></p>
+            <br>
+            <input type="radio" name="q4" id="q4_1"> Последовательное использование разных ИИ (текст, затем фото, затем видео).<br><br>
+            <input type="radio" name="q4" id="q4_2"> Работа строго в одной текстовой нейросети.<br><br>
+            <button class="btn" onclick="var r=document.getElementById('r4'); r.style.display='block'; if(document.getElementById('q4_1').checked){ r.style.color='#00ffaa'; r.innerText='Правильно!'; }else{ r.style.color='#ff4a4a'; r.innerText='Неверно. Попробуйте еще раз.'; }">Проверить ответ</button>
+            <div id="r4" class="res"></div>
+        </div>
+    </div>
+
+    <!-- МОДУЛЬ 5 -->
+    <div class="block">
+        <h2>Модуль 5: Архитектура ИИ-Агентов и автоматизация</h2>
+        <p>ИИ-Агенты — это автономные программы, которые используют нейросеть как мозг, но умеют сами совершать действия через внешние инструменты.</p>
+        <h3>Сферы применения:</h3>
+        <ul>
+            <li>Автоматические продажи: Агент сам ловит лид в CRM, пишет письмо через ИИ и отправляет клиенту.</li>
+            <li>Аналитика: ИИ обходит сайты конкурентов, собирает цены и составляет утреннюю таблицу.</li>
+            <li>Сборка без кода: Цепочки агентов настраиваются в сервисах Make или n8n.</li>
+        </ul>
+        
+        <div class="quiz">
+            <p><strong>Тест 5: Чем агент отличается от обычного чат-бота?</strong></p>
+            <br>
+            <input type="radio" name="q5" id="q5_1"> Он умеет использовать смайлики в тексте.<br><br>
+            <input type="radio" name="q5" id="q5_2"> Способностью автономно выполнять цепочки действий во внешних программах.<br><br>
+            <button class="btn" onclick="var r=document.getElementById('r5'); r.style.display='block'; if(document.getElementById('q5_2').checked){ r.style.color='#00ffaa'; r.innerText='Правильно!'; }else{ r.style.color='#ff4a4a'; r.innerText='Неверно. Попробуйте еще раз.'; }">Проверить ответ</button>
+            <div id="r5" class="res"></div>
+        </div>
+    </div>
+
+</body>
+</html>
