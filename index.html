@@ -3,32 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курс 1: Введение и Текстовые Модели</title>
+    <title>Курс 1: Энциклопедия Текстового ИИ</title>
     <style>
-        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; padding-top: 80px; }
-        .box { max-width: 700px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 20px; line-height: 1.6; padding-top: 80px; }
+        .box { max-width: 750px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .nav-bar { position: fixed; top: 0; left: 0; width: 100%; background: #161b26; border-bottom: 2px solid #00ffaa; padding: 12px; z-index: 999; text-align: center; }
         .nav-item { display: inline-block; background: #0f172a; color: #fff; padding: 6px 12px; margin: 0 4px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: 1px solid #2d3748; }
         .nav-item:hover { border-color: #00ffaa; }
         h1 { text-align: center; color: #fff; margin-bottom: 25px; border-bottom: 2px solid #00ffaa; padding-bottom: 15px; font-size: 1.6rem; font-weight: 700; }
-        h2 { color: #00ffaa; font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid #2563eb; padding-left: 12px; font-weight: 600; }
+        h2 { color: #00ffaa; font-size: 1.3rem; margin-top: 35px; margin-bottom: 15px; border-left: 4px solid #2563eb; padding-left: 12px; font-weight: 600; }
         h3 { color: #38bdf8; margin-top: 20px; font-size: 1.1rem; font-weight: 600; }
-        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.95rem; text-align: justify; }
+        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.98rem; text-align: justify; }
         ul, ol { margin-left: 20px; margin-bottom: 20px; }
         li { margin-bottom: 8px; color: #cbd5e1; font-size: 0.95rem; }
-        
-        .img-container { width: 100%; height: 240px; margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e293b; position: relative; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; }
-        .img-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(11, 15, 25, 0.9); padding: 10px 15px; font-size: 0.8rem; color: #38bdf8; font-weight: 600; border-top: 1px solid #1e293b; }
-        
+        .canvas-pic { width: 100%; height: 180px; background: linear-gradient(135deg, #1e1b4b, #0f172a); border-radius: 8px; margin: 20px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #00ffaa; font-size: 1.1rem; letter-spacing: 0.5px; }
         .example-box { background-color: #0f172a; padding: 15px; border-radius: 6px; margin: 15px 0; border: 1px solid #1e293b; border-left: 4px solid #00ffaa; font-size: 0.9rem; color: #94a3b8; }
-        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 30px; border: 1px solid #1e293b; }
-        .quiz p { font-weight: 600; color: #fff; margin-bottom: 12px; }
-        .opt { display: block; background: #161b26; padding: 12px; border-radius: 6px; margin-bottom: 8px; cursor: pointer; border: 1px solid #2d3748; font-size: 0.9rem; }
-        .opt input { margin-right: 10px; }
-        .msg { display: none; margin-top: 8px; padding: 8px; border-radius: 4px; font-weight: bold; font-size: 0.85rem; }
-        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.05); color: #00ffaa; border: 1px solid #00ffaa; }
-        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.05); color: #ff4a4a; border: 1px solid #ff4a4a; }
         .btn-next { display: block; background: #2563eb; color: #fff; border: none; padding: 14px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; margin-top: 30px; font-size: 1rem; }
         .partner-btn { display: inline-block; background-color: #00ffaa; color: #000; font-weight: bold; padding: 12px 24px; border-radius: 6px; text-decoration: none; margin-top: 10px; font-size: 0.95rem; }
     </style>
@@ -42,51 +31,42 @@
     </nav>
 
     <div class="box">
-        <h1>КУРС 1: Введение в ИИ и Текстовые Модели (БЕСПЛАТНО)</h1>
-        <p>Добро пожаловать в профессиональную Академию ИИ. В этом модуле вы научитесь эффективно настраивать рабочее пространство и делегировать рутинные задачи ведущим текстовым нейросетям мира.</p>
+        <h1>КУРС 1: Инженер Текстовых Моделей (Базовый уровень)</h1>
         
-        <h2>Шаг 1. Архитектура платформы SYNTX.AI</h2>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Панель ИИ">
-            <div class="img-caption">Интерфейс SYNTX AI: Мультимодельная ИИ-платформа для профессиональной работы</div>
-        </div>
-        <p>Современному ИИ-специалисту не нужен мощный компьютер — все тяжелые вычисления происходят на облачных серверах. Платформа SYNTX объединяет более 100 топовых нейросетей в едином окне. Текстовые модели здесь не имеют лимитов на запросы, а внутренняя валюта (Токены) расходуется исключительно на создание картинок, видео и музыки.</p>
-        
-        <p style="font-weight: bold; color: #00ffaa;">Перейдите на платформу по кнопке ниже, чтобы создать рабочий личный кабинет и получить стартовые приветственные токены:</p>
-        <a href="https://syntx.ai/welcome/xHPAHlsH" target="_blank" class="partner-btn">🚀 Открыть платформу SYNTX.AI</a>
-        <br><br>
+        <!-- ГЛАВА 1 -->
+        <h2>Глава 1. Экосистема SYNTX.AI и Облачные Вычисления</h2>
+        <div class="canvas-pic">SYS_CONSOLE // ЭКОСИСТЕМА ПОДКЛЮЧЕНИЯ ИИ</div>
+        <p>Современная ИИ-инженерия полностью базируется на удаленных облачных мощностях. Специалисту не требуется покупать дорогое оборудование — все операции по расчету токенов и обработке лингвистических структур происходят в дата-центрах. Платформа SYNTX выступает главным агрегатором, объединяющим в одном рабочем пространстве вычислительные ядра ChatGPT, Claude и DeepSeek.</p>
+        <p style="font-weight: bold; color: #00ffaa;">Для старта практической работы разверните личный кабинет по официальной реферальной ссылке:</p>
+        <a href="ВАША_ССЫЛКА_СЮДА" target="_blank" class="partner-btn">🚀 Подключить панель SYNTX.AI</a>
 
-        <h3>Использование мировых Трендов (Trendsworldwide):</h3>
-        <p>Вкладка Тренды на сайте содержит готовую библиотеку из 300+ популярных вирусных визуальных стилей и эффектов. Вы выбираете нужную карточку стиля, система сама настраивает Flux или Midjourney, а вам остается лишь загрузить исходный файл для получения трендовой графики.</p>
+        <!-- ГЛАВА 2 -->
+        <h2>Глава 2. Анализ Мировых Трендов (Trendsworldwide)</h2>
+        <div class="canvas-pic" style="background: linear-gradient(135deg, #091e3a, #111e38);">TREND_MODULE // БАЗА ВИЗУАЛЬНЫХ ШАБЛОНОВ</div>
+        <p>Вкладка Тренды на платформе SYNTX — это автоматизированный аналитический модуль, собирающий информацию о самых популярных визуальных стилях в медиа-пространстве. Внутри зашито более 300 готовых математических конфигураций промтов. Пользователю достаточно выбрать карточку нужного тренда и загрузить исходные данные — система сама применит скрытый код для воссоздания нужной стилистики в 1 клик.</p>
 
-        <h2>Шаг 2. Разбор текстовых программ (LLM Studio)</h2>
-        
-        <h3>🤖 Программа ChatGPT (Модель GPT-4o)</h3>
-        <p>Лучший универсальный ассистент для быстрой генерации идей, постов, писем, коммерческих предложений. При включении тумблера Web Search модель мгновенно сканирует интернет и выдает выжимку свежих новостей за сегодняшний день.</p>
+        <!-- ГЛАВА 3 -->
+        <h2>Глава 3. Работа в LLM Studio: Системный Копирайтинг в ChatGPT</h2>
+        <p>Модель ChatGPT (на базе ядра GPT-4o) спроектирована как скоростной инструмент для обработки текстовых массивов. Она незаменима для оперативного создания писем, постов, коммерческих ТЗ и базового маркетингового анализа. Функция Web Search позволяет модели сканировать актуальный интернет в реальном времени, отсекая устаревшие данные.</p>
         <div class="example-box">
-            <b>Пример готового промта:</b><br>
-            <i>"Действуй как ИТ-копирайтер. Напиши email-рассылку для клиентов нашей компании об обновлении личного кабинета. Перечисли 3 главные выгоды. Тон дружелюбный."</i>
+            <b>Шаблон бизнес-промта для ChatGPT:</b><br>
+            <i>"Действуй как ИТ-копирайтер. Напиши email-рассылку для клиентов нашей компании об обновлении личного кабинета. Перечисли 3 главные выгоды (быстрая загрузка, новый дизайн, защита данных). Тон дружелюбный, формат вывода — готовое письмо с темой."</i>
         </div>
 
-        <h3>🧠 Программа Claude (Модель Claude 3.5 Sonnet)</h3>
-        <p>Лидер в области сложной лингвистики. Пишет тексты «человеческим языком» без роботизированных штампов. Превосходно анализирует огромные юридические договоры, финансовые отчеты и пишет сложный программный код без ошибок.</p>
+        <!-- ГЛАВА 4 -->
+        <h2>Глава 4. Глубокий Языковой Анализ и Программирование в Claude</h2>
+        <p>Модель Claude 3.5 Sonnet обладает расширенным контекстным окном памяти и уникальными лингвистическими алгоритмами. Она пишет тексты естественным языком, полностью убирая роботизированные штампы и повторяющиеся паттерны. Claude используется для создания книг, проверки сложных юридических документов и написания чистого кода на Python и JavaScript.</p>
         <div class="example-box">
-            <b>Пример готового промта:</b><br>
-            <i>"Действуй как юрист. Проанализируй этот текст договора на оказание услуг [Вставить текст]. Найди 3 скрытых юридических риска для исполнителя."</i>
+            <b>Шаблон бизнес-промта для Claude:</b><br>
+            <i>"Действуй как юрист. Проанализируй этот текст договора на оказание услуг [Вставить текст]. Найди 3 скрытых юридических риска для исполнителя и перепиши эти пункты так, чтобы защитить наши права."</i>
         </div>
 
-        <h3>🔬 Программа DeepSeek R1 (Рассуждающая модель)</h3>
-        <p>ИИ нового поколения. Перед выводом ответа она запускает внутренний цикл пошаговых логических проверок и мыслей, исключая ошибки. Незаменима для тяжелой математики и программирования.</p>
+        <!-- ГЛАВА 5 -->
+        <h2>Глава 5. Логические Цепочки Рассуждений в DeepSeek R1</h2>
+        <p>DeepSeek R1 — представитель рассуждающих моделей (Reasoning). При получении комплексного запроса модель активирует внутренний цикл логического разбора (тег think). Она пошагово проверяет гипотезы, находит системные ошибки в собственных суждениях и выводит на экран только верифицированный результат. Модель идеальна для тяжелой математики, анализа логов серверов и поиска уязвимостей.</p>
         <div class="example-box">
-            <b>Пример готового промта:</b><br>
-            <i>"Действуй как старший Python-разработчик. Проанализируй этот кусок кода и лог ошибки сервера. Пошагово разбери, почему падает сервер, и выдай исправленный вариант."</i>
-        </div>
-
-        <div class="quiz">
-            <p>📋 Тест для самопроверки к Курсу 1:</p>
-            <p style="font-weight:normal; margin-bottom:10px; color:#cbd5e1;">Какую модель лучше всего выбрать, если вам нужно найти скрытую ошибку в сложном программном коде или решить тяжелую логическую задачу?</p>
-            <label class="opt no"><input type="radio" name="x1"> Модель ChatGPT-4o.<div class="msg">❌ Неверно. Она может упустить скрытые технические взаимосвязи.</div></label>
-            <label class="opt yes"><input type="radio" name="x1"> Рассуждающую модель DeepSeek R1.<div class="msg">🎉 Правильно! Её внутреннее пошаговое дерево мыслей идеально справляется со сложным кодингом.</div></label>
+            <b>Шаблон бизнес-промта для DeepSeek R1:</b><br>
+            <i>"Действуй как старший Python-разработчик. Проанализируй этот кусок кода и лог ошибки сервера. Пошагово разбери, почему падает сервер, и выдай исправленный вариант кода со строгими комментариями."</i>
         </div>
 
         <a href="page2.html" class="btn-next">Перейти к Курсу 2 (Коммерческая Графика) →</a>

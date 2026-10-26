@@ -1,33 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курс 2: Коммерческая Графика</title>
+    <title>Курс 2: Коммерческая Графика ПРО</title>
     <style>
         body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; padding-top: 80px; }
-        .box { max-width: 700px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .box { max-width: 750px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .nav-bar { position: fixed; top: 0; left: 0; width: 100%; background: #161b26; border-bottom: 2px solid #00ffaa; padding: 12px; z-index: 999; text-align: center; }
         .nav-item { display: inline-block; background: #0f172a; color: #fff; padding: 6px 12px; margin: 0 4px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: 1px solid #2d3748; }
         .nav-item:hover { border-color: #00ffaa; }
         h1 { text-align: center; color: #fff; margin-bottom: 25px; border-bottom: 2px solid #38bdf8; padding-bottom: 15px; font-size: 1.6rem; font-weight: 700; }
-        h2 { color: #38bdf8; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid #38bdf8; padding-left: 12px; font-weight: 600; }
+        h2 { color: #38bdf8; font-size: 1.4rem; margin-top: 35px; margin-bottom: 15px; border-left: 4px solid #38bdf8; padding-left: 12px; font-weight: 600; }
         h3 { color: #00ffaa; margin-top: 20px; font-size: 1.1rem; font-weight: 600; }
-        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.95rem; text-align: justify; }
+        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.98rem; text-align: justify; }
         ul, ol { margin-left: 20px; margin-bottom: 15px; }
         li { margin-bottom: 8px; color: #cbd5e1; }
-        
-        .img-container { width: 100%; height: 240px; margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e293b; position: relative; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; }
-        .img-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(11, 15, 25, 0.9); padding: 10px 15px; font-size: 0.8rem; color: #00ffaa; font-weight: 600; border-top: 1px solid #1e293b; }
-        
-        .example-box { background-color: #0f172a; padding: 15px; border-radius: 6px; margin: 15px 0; border-left: 4px solid #38bdf8; font-size: 0.9rem; color: #94a3b8; border: 1px solid #1e293b; }
-        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 25px; border: 1px solid #1e293b; }
-        .opt { display: block; background: #161b26; padding: 12px; border-radius: 6px; margin-bottom: 8px; cursor: pointer; border: 1px solid #2d3748; }
-        .opt input { margin-right: 10px; }
-        .msg { display: none; margin-top: 10px; padding: 10px; border-radius: 4px; font-weight: bold; }
-        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.05); color: #00ffaa; border: 1px solid #00ffaa; }
-        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.05); color: #ff4a4a; border: 1px solid #ff4a4a; }
+        .canvas-pic { width: 100%; height: 180px; background: linear-gradient(135deg, #1f1625, #11051c); border-radius: 8px; margin: 20px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #38bdf8; font-size: 1.1rem; }
+        .example-box { background-color: #0f172a; padding: 15px; border-radius: 6px; margin: 15px 0; border: 1px solid #1e293b; border-left: 4px solid #38bdf8; font-size: 0.9rem; color: #94a3b8; }
         .btn-flex { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; }
         .btn-link { display: block; width: 48%; padding: 14px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; background-color: #2d3748; color: #fff; border: 1px solid #4a5568; }
     </style>
@@ -41,45 +32,42 @@
     </nav>
 
     <div class="box">
-        <h1>КУРС 2: Мастер Коммерческой Графики (БЕСПЛАТНО)</h1>
-        <p>Добро пожаловать на профессиональную ступень. Здесь вы научитесь создавать рекламную графику, фирменные стили и продающий визуал под задачи реального бизнеса.</p>
+        <h1>КУРС 2: Профессиональная Графика и Дизайн (Средний уровень)</h1>
         
-        <h2>Шаг 3. Инструменты создания коммерческого визуала</h2>
-        <div class="img-container">
-            <img src="https://unsplash.com" alt="Графика ИИ">
-            <div class="img-caption">Графический ИИ: Создание фотореалистичного продающего контента на заказ</div>
-        </div>
-        
-        <h3>🚀 Нейросеть Midjourney v6</h3>
-        <p>Мировой лидер в генерации фотореализма, концепт-дизайна и рекламы. Нейросеть превосходно понимает настройки профессиональных камер: схемы студийного света (studio lighting) и типы объективов (например, 85mm lens).</p>
-        
-        <h3>⚡ Нейросеть Flux Pro</h3>
-        <p>Самый точный ИИ по соблюдению деталей ТЗ. Главное коммерческое преимущество Flux — безупречное написание печатного текста латинскими буквами прямо внутри изображения без искажений.</p>
+        <!-- ГЛАВА 1 -->
+        <h2>Глава 1. Кинематографичный Дизайн в Midjourney v6</h2>
+        <div class="canvas-pic">MIDJOURNEY_V6 // ГЕНЕРАЦИЯ ВЫСОКОГО РАЗРЕШЕНИЯ</div>
+        <p>Midjourney v6 является индустриальным стандартом для создания сложных художественных иллюстраций, трехмерных концепт-артов и фотореалистичных изображений. Нейросеть полностью имитирует оптику реальных камер. Для достижения коммерческого качества необходимо прописывать параметры света (cinematic lighting, студийное освещение) и фокусные расстояния линз (85mm lens, macro shot).</p>
 
-        <h2>Шаг 4. Практические кейсы промтинга для бизнеса</h2>
-        <p>Для работы с заказчиками вам необходимо использовать специальные текстовые параметры в конце промтов:</p>
+        <!-- ГЛАВА 2 -->
+        <h2>Глава 2. Точное Следование ТЗ и Шрифты во Flux Pro</h2>
+        <div class="canvas-pic" style="background: linear-gradient(135deg, #0d233a, #071524);">FLUX_PRO // ТОЧНАЯ ГЕНЕРАЦИЯ ТЕКСТА</div>
+        <p>В отличие от Midjourney, которая добавляет абстрактный художественный декор, модель Flux Pro создана для точнейшего исполнения инструкций промта. Её главная фишка в коммерческом дизайне — способность без искажений писать печатный текст латиницей прямо на генерируемых объектах (вывесках, коробках товаров, интерфейсах).</p>
 
+        <!-- ГЛАВА 3 -->
+        <h2>Глава 3. Коммерческий Кейс: Карточки Товаров для Маркетплейсов</h2>
+        <p>Создание графики для Wildberries и Ozon требует изоляции объекта и качественного фонового окружения. Использование Flux Pro позволяет сразу внедрять название бренда в изображение флаконов или упаковок.</p>
         <div class="example-box">
-            <b>Кейс 1: Рекламная карточка товара для маркетплейсов (Модель Flux)</b><br>
-            <b>Промт:</b> <i>"A luxury glass perfume bottle standing on a polished black marble stone, water splashes, studio dramatic lighting, dark background. On the bottle there is a clear printed text 'ELIXIR'. High-end commercial product photography, hyperrealistic."</i>
+            <b>Готовый рабочий промт:</b><br>
+            <i>"A luxury glass perfume bottle standing on a polished black marble stone, water splashes, studio dramatic lighting, dark background. On the bottle there is a clear printed text 'ELIXIR'. High-end commercial product photography, hyperrealistic."</i>
         </div>
 
+        <!-- ГЛАВА 4 -->
+        <h2>Глава 4. Коммерческий Кейс: Разработка Минималистичных Логотипов</h2>
+        <p>При создании логотипов важно указывать ИИ на плоский векторный стиль и чистый изолированный фон, чтобы дизайнер мог легко перенести логотип на сайт или фирменный бланк.</p>
         <div class="example-box">
-            <b>Кейс 2: Создание минималистичного логотипа (Модель Midjourney)</b><br>
-            <b>Промт:</b> <i>"A minimalist vector logo of a coffee cup, clean lines, flat design, black and gold color palette, white solid background, modern graphic design, vector asset Параметр AR 1:1"</i>
+            <b>Готовый рабочий промт:</b><br>
+            <i>"A minimalist vector logo of a coffee cup, clean lines, flat design, black and gold color palette, white solid background, modern graphic design, vector asset Параметр AR 1:1"</i>
         </div>
 
-        <div class="example-box">
-            <b>Кейс 3: Баннер с удержанием фирменного стиля заказчика</b><br>
-            <b>Промт:</b> <i>"A modern futuristic workspace with a laptop on the desk, neon lighting, cyberpunk aesthetic, high resolution Парамтер AR 16:9 Параметр SREF [ссылка на картинку заказчика]"</i>
-        </div>
-
-        <div class="quiz">
-            <p>📋 Тест для самопроверки к Курсу 2:</p>
-            <p style="font-weight:normal; margin-bottom:10px; color:#cbd5e1;">Какой инструмент нужно применить, чтобы ИИ нарисовал вывеску здания, на которой будет четко и без грамматических ошибок выведено название латиницей?</p>
-            <label class="opt no"><input type="radio" name="ans4"> Модель Midjourney с параметром AR 16:9.<div class="msg">❌ Неверно. Midjourney часто путает и искажает буквы в словах.</div></label>
-            <label class="opt yes"><input type="radio" name="ans4"> Специализированную модель Flux.<div class="msg">🎉 Совершенно верно! Flux — лучший инструмент в мире для генерации правильных надписей.</div></label>
-        </div>
+        <!-- ГЛАВА 5 -->
+        <h2>Глава 5. Синтаксис Параметров Стилизации: AR, SREF и CREF</h2>
+        <p>Управление итоговым результатом происходит через команды-параметры в самом конце запроса:</p>
+        <ul>
+            <li><b>Параметр формата AR 16:9</b> — трансформирует холст в горизонтальный широкоформатный размер под баннеры и веб-сайты.</li>
+            <li><b>Параметр стиля SREF</b> — копирует цветовую палитру, баланс белого и художественную текстуру с любого загруженного изображения-примера от заказчика.</li>
+            <li><b>Параметр персонажа CREF</b> — фиксирует геометрию лица человека, позволяя создавать серии кадров с одним героем в разных сюжетах рекламы.</li>
+        </ul>
 
         <div class="btn-flex">
             <a href="index.html" class="btn-link">← Назад в Курс 1</a>
