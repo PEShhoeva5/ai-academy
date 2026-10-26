@@ -3,67 +3,87 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Академия ИИ: Часть 2</title>
+    <title>Курс 2: Коммерческая Графика</title>
     <style>
-        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; }
-        .box { max-width: 650px; margin: 0 auto; background-color: #161b26; padding: 25px; border-radius: 12px; border: 1px solid #2d3748; }
-        h1 { text-align: center; color: #fff; margin-bottom: 20px; border-bottom: 2px solid #00ffaa; padding-bottom: 15px; font-size: 1.6rem; }
-        h2 { color: #00ffaa; font-size: 1.3rem; margin-bottom: 15px; }
-        h3 { color: #38bdf8; margin-top: 15px; font-size: 1.1rem; }
-        p { color: #cbd5e1; margin-bottom: 12px; }
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; line-height: 1.6; padding-top: 80px; }
+        .box { max-width: 700px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .nav-bar { position: fixed; top: 0; left: 0; width: 100%; background: #161b26; border-bottom: 2px solid #00ffaa; padding: 12px; z-index: 999; text-align: center; }
+        .nav-item { display: inline-block; background: #0f172a; color: #fff; padding: 6px 12px; margin: 0 4px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: 1px solid #2d3748; }
+        .nav-item:hover { border-color: #00ffaa; }
+        h1 { text-align: center; color: #fff; margin-bottom: 25px; border-bottom: 2px solid #38bdf8; padding-bottom: 15px; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+        h2 { color: #38bdf8; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid #38bdf8; padding-left: 12px; font-weight: 600; }
+        h3 { color: #00ffaa; margin-top: 20px; font-size: 1.1rem; font-weight: 600; }
+        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.95rem; text-align: justify; }
         ul, ol { margin-left: 20px; margin-bottom: 15px; }
-        li { margin-bottom: 6px; }
-        .pic { width: 100%; height: 130px; background: linear-gradient(135deg, #1c0a35, #0f172a); border-radius: 8px; margin: 15px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #ffd700; }
-        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #2d3748; }
+        li { margin-bottom: 8px; color: #cbd5e1; }
+        
+        .img-container { width: 100%; height: 220px; margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e293b; position: relative; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .img-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(11, 15, 25, 0.9); padding: 10px 15px; font-size: 0.8rem; color: #00ffaa; font-weight: 600; border-top: 1px solid #1e293b; }
+        
+        .example-box { background-color: #0f172a; padding: 15px; border-radius: 6px; margin: 15px 0; border-left: 4px solid #38bdf8; font-size: 0.9rem; color: #94a3b8; border: 1px solid #1e293b; }
+        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 25px; border: 1px solid #1e293b; }
         .opt { display: block; background: #161b26; padding: 12px; border-radius: 6px; margin-bottom: 8px; cursor: pointer; border: 1px solid #2d3748; }
         .opt input { margin-right: 10px; }
         .msg { display: none; margin-top: 10px; padding: 10px; border-radius: 4px; font-weight: bold; }
-        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.1); color: #00ffaa; border: 1px solid #00ffaa; }
-        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.1); color: #ff4a4a; border: 1px solid #ff4a4a; }
-        .btn-flex { display: flex; justify-content: space-between; margin-top: 25px; gap: 15px; }
-        .btn-link { display: block; width: 48%; padding: 12px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; }
+        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.05); color: #00ffaa; border: 1px solid #00ffaa; }
+        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.05); color: #ff4a4a; border: 1px solid #ff4a4a; }
+        .btn-flex { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; }
+        .btn-link { display: block; width: 48%; padding: 14px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; transition: 0.2s; background-color: #2d3748; color: #fff; border: 1px solid #4a5568; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Академия ИИ: Полное обучение</h1>
 
-        <!-- ШАГ 3 -->
-        <span style="background:#2563eb; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold;">Шаг 3 из 5</span>
-        <h2>3. Глубокая логика и рассуждения в DeepSeek R1</h2>
-        <div class="pic">🧠 [Логический цикл Reasoning в DeepSeek]</div>
-        <p>Модели класса Reasoning (Рассуждающие), такие как DeepSeek R1, перед выводом ответа запускают внутренний мыслительный цикл. Она анализирует задачу и проверяет саму себя на ошибки.</p>
-        <ul>
-            <li>Никогда не требуйте краткости сразу. Дайте модели сначала полностью расписать логику.</li>
-            <li>Загружайте сырые финансовые отчеты или сложный код целиком — модель сама выстроит цепочку проверок.</li>
-        </ul>
-        <div class="quiz">
-            <p><strong>Практический тест к Шагу 3:</strong></p><br>
-            <label class="opt no"><input type="radio" name="ans3"> Главная фишка DeepSeek R1 — создание картинок.<div class="msg">❌ Неверно. Это текстовая модель.</div></label>
-            <label class="opt yes"><input type="radio" name="ans3"> Модель пошагово анализирует свои гипотезы перед ответом.<div class="msg">🎉 Точно! Это позволяет ей решать задачи экспертного уровня.</div></label>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-item">Курс 1</a>
+        <a href="page2.html" class="nav-item" style="border-color:#00ffaa;">Курс 2</a>
+        <a href="page3.html" class="nav-item">Курс 3</a>
+    </nav>
+
+    <div class="box">
+        <h1>КУРС 2: Мастер Коммерческой Графики (БЕСПЛАТНО)</h1>
+        <p>Добро пожаловать на профессиональную ступень. Здесь вы научитесь создавать рекламную графику, фирменные стили и продающий визуал под задачи реального бизнеса.</p>
+        
+        <h2>Шаг 3. Инструменты создания коммерческого визуала</h2>
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Графика ИИ">
+            <div class="img-caption">Графический ИИ: Создание фотореалистичного продающего контента на заказ</div>
+        </div>
+        
+        <h3>🚀 Нейросеть Midjourney v6</h3>
+        <p>Мировой лидер в генерации фотореализма, концепт-дизайна и рекламы. Превосходно понимает настройки профессиональных камер: схемы студийного света (studio lighting) и типы объективов (например, 85mm lens).</p>
+        
+        <h3>⚡ Нейросеть Flux Pro</h3>
+        <p>Самый точный ИИ по соблюдению деталей ТЗ. Главное коммерческое преимущество Flux — безупречное написание печатного текста латинскими буквами прямо внутри изображения без искажений.</p>
+
+        <h2>Шаг 4. Практические кейсы промтинга для бизнеса</h2>
+        <p>Для работы с заказчиками вам необходимо использовать специальные текстовые параметры в конце промтов:</p>
+
+        <div class="example-box">
+            <b>Кейс 1: Рекламная карточка товара для маркетплейсов (Модель Flux)</b><br>
+            <b>Промт:</b> <i>"A luxury glass perfume bottle standing on a polished black marble stone, water splashes, studio dramatic lighting, dark background. On the bottle there is a clear printed text 'ELIXIR'. High-end commercial product photography, hyperrealistic."</i>
         </div>
 
-        <br><hr style="border-color:#2d3748;"><br>
+        <div class="example-box">
+            <b>Кейс 2: Создание минималистичного логотипа (Модель Midjourney)</b><br>
+            <b>Промт:</b> <i>"A minimalist vector logo of a coffee cup, clean lines, flat design, black and gold color palette, white solid background, modern graphic design, vector asset Параметр AR 1:1"</i>
+        </div>
 
-        <!-- ШАГ 4 -->
-        <span style="background:#2563eb; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold;">Шаг 4 из 5</span>
-        <h2>4. Режиссура кадра и коммерческая графика в Midjourney</h2>
-        <div class="pic" style="background: linear-gradient(135deg, #2d0b25, #11051c);">🎨 [Управление графикой и стилем бренда]</div>
-        <p>В коммерческом дизайне заказчики требуют точного соблюдения фирменного стиля. Для этого в Midjourney применяется продвинутый синтаксис параметров.</p>
-        <ul>
-            <li><b>Параметр формата AR 16:9</b> — делает изображение широкоформатным для сайтов.</li>
-            <li><b>Параметр стиля SREF</b> — полностью копирует цвета и свет с картинки-примера заказчика.</li>
-            <li><b>Параметр персонажа CREF</b> — удерживает лицо одного человека на разных генерациях рекламы.</li>
-        </ul>
+        <div class="example-box">
+            <b>Кейс 3: Баннер с удержанием фирменного стиля заказчика</b><br>
+            <b>Промт:</b> <i>"A modern futuristic workspace with a laptop on the desk, neon lighting, cyberpunk aesthetic, high resolution Парамтер AR 16:9 Параметр SREF [ссылка на картинку заказчика]"</i>
+        </div>
+
         <div class="quiz">
-            <p><strong>Практический тест к Шагу 4:</strong></p><br>
-            <label class="opt yes"><input type="radio" name="ans4"> Параметр SREF с ссылкой на стиль.<div class="msg">🎉 Верно! Использование SREF гарантирует точное копирование стиля.</div></label>
-            <label class="opt no"><input type="radio" name="ans4"> Параметр формата AR 16:9.<div class="msg">❌ Нет. Этот параметр отвечает только за форму кадра.</div></label>
+            <p>📋 Тест для самопроверки к Курсу 2:</p>
+            <p style="font-weight:normal; margin-bottom:10px; color:#cbd5e1;">Какой инструмент нужно применить, чтобы ИИ нарисовал вывеску здания, на которой будет четко и без грамматических ошибок выведено название латиницей?</p>
+            <label class="opt no"><input type="radio" name="ans4"> Модель Midjourney с параметром AR 16:9.<div class="msg">❌ Неверно. Midjourney часто путает и искажает буквы в словах.</div></label>
+            <label class="opt yes"><input type="radio" name="ans4"> Специализированную модель Flux.<div class="msg">🎉 Совершенно верно! Flux — лучший инструмент в мире для генерации правильных надписей.</div></label>
         </div>
 
         <div class="btn-flex">
-            <a href="index.html" class="btn-link" style="background-color: #2d3748; color: #fff; border: 1px solid #4a5568;">← Назад</a>
-            <a href="page3.html" class="btn-link" style="background-color: #2563eb; color: #fff;">Далее (Шаг 5 и Практика) →</a>
+            <a href="index.html" class="btn-link">← Назад в Курс 1</a>
+            <a href="page3.html" class="btn-link" style="background-color:#2563eb; border-color:#2563eb; color:#fff;">В Курс 3 (Видео-Продакшн) →</a>
         </div>
     </div>
 </body>

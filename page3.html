@@ -1,86 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Академия ИИ: Часть 3</title>
+    <title>Курс 3: Нейро-Продакшн и Диплом</title>
     <style>
-        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; }
-        .box { max-width: 650px; margin: 0 auto; background-color: #161b26; padding: 25px; border-radius: 12px; border: 1px solid #2d3748; }
-        h1 { text-align: center; color: #fff; margin-bottom: 20px; border-bottom: 2px solid #00ffaa; padding-bottom: 15px; font-size: 1.6rem; }
-        h2 { color: #00ffaa; font-size: 1.3rem; margin-bottom: 15px; }
-        h3 { color: #38bdf8; margin-top: 15px; font-size: 1.1rem; }
-        p { color: #cbd5e1; margin-bottom: 12px; }
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; line-height: 1.6; padding-top: 80px; }
+        .box { max-width: 700px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .nav-bar { position: fixed; top: 0; left: 0; width: 100%; background: #161b26; border-bottom: 2px solid #00ffaa; padding: 12px; z-index: 999; text-align: center; }
+        .nav-item { display: inline-block; background: #0f172a; color: #fff; padding: 6px 12px; margin: 0 4px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: 1px solid #2d3748; }
+        .nav-item:hover { border-color: #00ffaa; }
+        h1 { text-align: center; color: #fff; margin-bottom: 25px; border-bottom: 2px solid #38bdf8; padding-bottom: 15px; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+        h2 { color: #38bdf8; font-size: 1.4rem; margin-top: 25px; margin-bottom: 15px; border-left: 4px solid #38bdf8; padding-left: 12px; font-weight: 600; }
+        h3 { color: #00ffaa; margin-top: 20px; font-size: 1.1rem; font-weight: 600; }
+        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.95rem; text-align: justify; }
         ul, ol { margin-left: 20px; margin-bottom: 15px; }
-        li { margin-bottom: 6px; }
-        .pic { width: 100%; height: 130px; background: linear-gradient(135deg, #022c22, #064e3b); border-radius: 8px; margin: 15px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #00ffaa; }
-        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #2d3748; }
+        li { margin-bottom: 8px; color: #cbd5e1; }
+        
+        .img-container { width: 100%; height: 220px; margin: 20px 0; border-radius: 8px; overflow: hidden; border: 1px solid #1e293b; position: relative; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .img-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(11, 15, 25, 0.9); padding: 10px 15px; font-size: 0.8rem; color: #38bdf8; font-weight: 600; border-top: 1px solid #1e293b; }
+        
+        .info-panel { background-color: #0f172a; padding: 15px; border-radius: 6px; margin: 12px 0; border-left: 4px solid #38bdf8; }
+        .quiz { background: #0f172a; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #1e293b; }
         .opt { display: block; background: #161b26; padding: 12px; border-radius: 6px; margin-bottom: 8px; cursor: pointer; border: 1px solid #2d3748; }
         .opt input { margin-right: 10px; }
         .msg { display: none; margin-top: 10px; padding: 10px; border-radius: 4px; font-weight: bold; }
-        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.1); color: #00ffaa; border: 1px solid #00ffaa; }
-        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.1); color: #ff4a4a; border: 1px solid #ff4a4a; }
+        .yes input:checked ~ .msg { display: block; background: rgba(0, 255, 170, 0.05); color: #00ffaa; border: 1px solid #00ffaa; }
+        .no input:checked ~ .msg { display: block; background: rgba(255, 74, 74, 0.05); color: #ff4a4a; border: 1px solid #ff4a4a; }
         .prompt-input { width: 100%; height: 80px; background: #161b26; border: 1px solid #2d3748; border-radius: 6px; color: #fff; padding: 12px; font-size: 0.95rem; margin-top: 10px; resize: none; }
         .tips-box { background: #161b26; padding: 15px; border-radius: 6px; border-left: 4px solid #38bdf8; margin-top: 12px; font-size: 0.9rem; color: #cbd5e1; }
-        .btn-flex { display: flex; justify-content: space-between; margin-top: 25px; gap: 15px; }
-        .btn-link { display: block; width: 48%; padding: 12px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; }
         
-        /* Стили нового золотого блока сертификата */
-        .cert-card { background: linear-gradient(135deg, #1e1b10, #111e38); border: 2px solid #ffd700; padding: 25px; border-radius: 10px; text-align: center; margin-top: 35px; box-shadow: 0 0 15px rgba(255, 215, 0, 0.1); }
-        .cert-medal { font-size: 3.5rem; text-shadow: 0 0 15px #ffd700; margin-bottom: 10px; }
-        .cert-btn { display: block; background-color: #ffd700; color: #000; font-weight: bold; text-decoration: none; padding: 12px; border-radius: 6px; font-size: 1rem; margin-top: 15px; transition: 0.2s; }
-        .cert-btn:hover { opacity: 0.9; box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+        .tech-cert-panel { background-color: #0f172a; border: 1px solid #1e293b; border-top: 3px solid #2563eb; padding: 30px; border-radius: 8px; text-align: left; margin-top: 40px; }
+        .tech-cert-status { font-family: monospace; color: #2563eb; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .tech-cert-title { color: #fff; font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; }
+        .tech-cert-line { height: 1px; background: #1e293b; margin: 15px 0; }
+        .tech-btn { display: block; background-color: #2563eb; color: #fff; font-weight: 600; text-decoration: none; padding: 14px; border-radius: 6px; font-size: 0.95rem; text-align: center; margin-top: 20px; transition: 0.2s; letter-spacing: 0.5px; }
+        .tech-btn:hover { background-color: #1d4ed8; }
+        
+        .btn-flex { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; }
+        .btn-link { display: block; width: 48%; padding: 14px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; transition: 0.2s; background-color: #2d3748; color: #fff; border: 1px solid #4a5568; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Академия ИИ: Полное обучение</h1>
 
-        <!-- ШАГ 5 -->
-        <span style="background:#2563eb; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold;">Шаг 5 из 5</span>
-        <h2>5. Коммерциализация навыков и выполнение платных заказов</h2>
-        <div class="pic">💎 [Карта заработка ИИ-специалиста]</div>
-        <p>Вы прошли всю цепочку обучения от А до Я. Пора переходить к заработку на фрилансе и автоматизации процессов компаний.</p>
-        <ul>
-            <li><b>Фриланс-биржи:</b> Создайте карточки услуг: Написание статей через ИИ, Генерация карточек товаров.</li>
-            <li><b>Прямые продажи:</b> Сделайте для клиента быстрый тестовый баннер через ИИ бесплатно и покажите результат. Бизнес охотно купит у вас ведение соцсетей.</li>
-        </ul>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-item">Курс 1</a>
+        <a href="page2.html" class="nav-item">Курс 2</a>
+        <a href="page3.html" class="nav-item" style="border-color:#00ffaa;">Курс 3</a>
+    </nav>
+
+    <div class="box">
+        <h1>КУРС 3: Нейро-Продакшн и Интеграции (БЕСПЛАТНО)</h1>
+        <p>Высшая ступень обучения. Проектирование сложных сквозных медиа-систем, видеомонтаж нового поколения и звуковой инжиниринг.</p>
+
+        <h2>Шаг 5. Программы генерации видео, музыки и речи</h2>
+        <div class="img-container">
+            <img src="https://unsplash.com" alt="Видео нейросети">
+            <div class="img-caption">Нейро-видеопроизводство: Создание динамического контента высокого разрешения</div>
+        </div>
+        
+        <h3>🎬 Видео-модели Kling AI и Runway Gen-3</h3>
+        <p>Позволяют оживлять статичные кадры (режим Image-to-Video). Профессиональный алгоритм: сначала генерируется идеальное изображение в Midjourney, загружается в Kling, а в текстовом поле прописывается исключительно вектор движения камеры (например: slow cinematic zoom in, панорамный сдвиг влево).</p>
+        
+        <h3>🎵 Музыкальный ИИ Suno</h3>
+        <p>Генерирует песни с инструменталом и вокалом за 30 секунд. В режиме Custom вы задаете точный жанр (например: электроника, синтвейв, мужской вокал) и вставляете текст песни, написанный в Claude.</p>
+
+        <h3>🗣 Озвучка Диктора ElevenLabs</h3>
+        <p>Мировой эталон клонирования голоса. Превращает текст в аудио-озвучку с реалистичными человеческими интонациями, эмоциями и вздохами на любом языке.</p>
+
+        <h2>Шаг 6. Архитектура коммерческого ИИ-конвейера</h2>
+        <p>Создание видеорекламы для компании на заказ происходит по строгому алгоритму:</p>
+        <ol>
+            <li><b>Этап 1:</b> Пишем сценарий ролика и промты для кадров в текстовом ИИ (Claude).</li>
+            <li><b>Этап 2:</b> Генерируем серию статичных картинок в Midjourney, сохраняя стиль через параметр SREF.</li>
+            <li><b>Этап 3:</b> Оживляем полученные картинки в видео через Kling AI (Image-to-Video).</li>
+            <li><b>Этап 4:</b> Генерируем озвучку в ElevenLabs, музыку в Suno и собираем ролик в видеоредакторе.</li>
+        </ol>
+
         <div class="quiz">
-            <p><strong>Практический тест к Шагу 5:</strong></p><br>
-            <label class="opt no"><input type="radio" name="ans5"> Долго рассылать всем текстовые прайс-листы.<div class="msg">❌ Неверно. Прайс-листы без примера работы не эффективны.</div></label>
-            <label class="opt yes"><input type="radio" name="ans5"> Сделать для клиента быстрый бесплатный тестовый результат через ИИ и показать его живьем.<div class="msg">🎉 Поздравляем! Вы прошли весь курс обучения, все тесты и готовы зарабатывать!</div></label>
+            <p>📋 Тест для самопроверки к Курсу 3:</p><br>
+            <p style="font-weight:normal; margin-bottom:10px; color:#cbd5e1;">Как получить максимальное качество видеоролика в Kling AI без искажения пропорций и лиц?</p>
+            <label class="opt no"><input type="radio" name="ans5"> Написать длинное описание сюжета сразу в видео-ИИ.<div class="msg">❌ Неверно. Нейросеть исказит пропорции.</div></label>
+            <label class="opt yes"><input type="radio" name="ans5"> Загрузить готовую качественную картинку из Midjourney и оживить её в режиме Image-to-Video.<div class="msg">🎉 Идеально! Это золотой стандарт нейро-производства.</div></label>
         </div>
 
-        <br><hr style="border-color:#2d3748;"><br>
+        <br><hr style="border-color:#1e293b;"><br>
 
-        <!-- ПРАКТИКА -->
-        <span style="background:#38bdf8; padding:3px 8px; border-radius:3px; font-size:0.8rem; font-weight:bold; color:#000;">Финал</span>
-        <h2>Финальный практикум: Песочница ИИ-Промтов</h2>
-        <p>Примените теорию на практике. Ознакомьтесь с реальным ТЗ от заказчика и напишите свой первый рабочий промт в поле ввода ниже.</p>
-        
+        <!-- ФИНАЛЬНАЯ ПЕСОЧНИЦА -->
+        <h2>Шаг 7. Выпускной практикум: Песочница ИИ-Промтов</h2>
+        <p>Создайте свой первый рабочий промт на основе реального коммерческого ТЗ от заказчика:</p>
         <div class="quiz" style="background:#161b26; border-color:#38bdf8;">
-            <p style="color:#38bdf8;">📋 ТЗ от заказчика:</p>
+            <p style="color:#38bdf8; font-weight:600;">📋 ТЗ от заказчика:</p>
             <div class="tips-box">
-                Создать рекламный баннер для кофейни. На изображении должна быть чашка горячего капучино на деревянном столе, мягкий утренний свет из окна. Формат кадра должен быть широким.
+                <b>Задача:</b> Создать рекламный баннер для кофейни. На изображении должна быть чашка горячего капучино на деревянном столе, мягкий утренний свет из окна. Формат кадра должен быть широким.
             </div>
             <h3 style="margin-top:15px; margin-bottom:5px;">Поле ввода вашего промта:</h3>
-            <textarea class="prompt-input" placeholder="Напишите сюда ваше ТЗ для ИИ. Пример: Профессиональный фотограф, чашка кофе на столе, утренний свет, параметр стиля SREF, параметр формата AR 16:9..."></textarea>
+            <textarea class="prompt-input" placeholder="Напишите сюда ваше ТЗ для ИИ..."></textarea>
         </div>
 
-        <!-- НОВЫЙ БЛОК СЕРТИФИКАТА -->
-        <div class="cert-card">
-            <div class="cert-medal">👑</div>
-            <h2 style="color: #ffd700; margin-bottom: 10px;">Вы заслужили Сертификат Выпускника!</h2>
-            <p style="font-size: 0.95rem; color: #e2e8f0;">Вы успешно прошли все теоретические шаги, закрепили знания интерактивными тестами и выполнили выпускную практическую работу в ИИ-песочнице.</p>
-            <p style="font-size: 0.9rem; color: #ffd700; font-weight: bold; margin-top: 5px;">Ваш статус: Сертифицированный Специалист по Нейросетям ПРО</p>
-            
-            <!-- Позже сюда можно будет вставить ссылку на вашу личную анкету, почту или форму оплаты -->
-            <a href="#" class="cert-btn" onclick="alert('Поздравляем! Заявка на оформление вашего именного электронного сертификата успешно создана.')">Скачать именной сертификат</a>
+        <!-- СТРОГИЙ МИНИМАЛИСТИЧНЫЙ БЛОК СЕРТИФИКАЦИИ -->
+        <div class="tech-cert-panel">
+            <span class="tech-cert-status">// VERIFIED GRADUATE</span>
+            <div class="tech-cert-title">Документ об окончании программы обучения</div>
+            <p style="font-size: 0.93rem; color: #94a3b8; margin-bottom:0;">Вы успешно прошли все три ступени учебной программы Академии, освоили текстовые, графические, видео и аудио нейросети экосистемы SYNTX.AI и успешно защитили выпускную практику в интерактивной песочнице промтов.</p>
+            <div class="tech-cert-line"></div>
+            <p style="font-size: 0.9rem; color: #fff; font-family: monospace;">Присвоенная квалификация: Специалист по Прикладному ИИ (ПРО)</p>
+            <a href="#" class="tech-btn" onclick="alert('Верификация успешно пройдена. Заявка на автоматическое формирование вашего официального цифрового диплома зарегистрирована.')">Выпустить цифровой диплом</a>
         </div>
 
         <div class="btn-flex">
-            <a href="page2.html" class="btn-link" style="background-color: #2d3748; color: #fff; border: 1px solid #4a5568;">← Назад</a>
-            <a href="index.html" class="btn-link" style="background-color: #00ffaa; color: #000;" onclick="alert('Вы успешно прошли весь курс! Теперь вы можете повторить обучение с самого начала.')">В начало курса ↑</a>
+            <a href="page2.html" class="btn-link">← Назад в Курс 2</a>
+            <a href="index.html" class="btn-link" style="background-color: #00ffaa; color: #000;" onclick="alert('Система перезапущена. Вы возвращаетесь в начало учебной программы.')">В начало Академии ↑</a>
         </div>
     </div>
 </body>
