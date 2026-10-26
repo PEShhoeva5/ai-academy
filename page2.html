@@ -1,78 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курс 2: Коммерческая Графика ПРО</title>
+    <title>Курс 3: Нейро-Продакшн и Диплом</title>
     <style>
-        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.6; padding-top: 80px; }
-        .box { max-width: 750px; margin: 0 auto; background-color: #111726; padding: 35px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        body { background-color: #0b0f19; color: #e2e8f0; font-family: sans-serif; padding: 20px; line-height: 1.7; padding-top: 80px; }
+        .box { max-width: 800px; margin: 0 auto; background-color: #111726; padding: 40px; border-radius: 12px; border: 1px solid #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .nav-bar { position: fixed; top: 0; left: 0; width: 100%; background: #161b26; border-bottom: 2px solid #00ffaa; padding: 12px; z-index: 999; text-align: center; }
-        .nav-item { display: inline-block; background: #0f172a; color: #fff; padding: 6px 12px; margin: 0 4px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; border: 1px solid #2d3748; }
+        .nav-item { display: inline-block; background: #0f172a; color: #fff; padding: 8px 16px; margin: 0 4px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; border: 1px solid #2d3748; }
         .nav-item:hover { border-color: #00ffaa; }
-        h1 { text-align: center; color: #fff; margin-bottom: 25px; border-bottom: 2px solid #38bdf8; padding-bottom: 15px; font-size: 1.6rem; font-weight: 700; }
-        h2 { color: #38bdf8; font-size: 1.4rem; margin-top: 35px; margin-bottom: 15px; border-left: 4px solid #38bdf8; padding-left: 12px; font-weight: 600; }
-        h3 { color: #00ffaa; margin-top: 20px; font-size: 1.1rem; font-weight: 600; }
-        p { color: #cbd5e1; margin-bottom: 15px; font-size: 0.98rem; text-align: justify; }
-        ul, ol { margin-left: 20px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; color: #cbd5e1; }
-        .canvas-pic { width: 100%; height: 180px; background: linear-gradient(135deg, #1f1625, #11051c); border-radius: 8px; margin: 20px 0; border: 1px solid #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #38bdf8; font-size: 1.1rem; }
-        .example-box { background-color: #0f172a; padding: 15px; border-radius: 6px; margin: 15px 0; border: 1px solid #1e293b; border-left: 4px solid #38bdf8; font-size: 0.9rem; color: #94a3b8; }
-        .btn-flex { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; }
-        .btn-link { display: block; width: 48%; padding: 14px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; background-color: #2d3748; color: #fff; border: 1px solid #4a5568; }
+        h1 { text-align: center; color: #fff; margin-bottom: 30px; border-bottom: 2px solid #38bdf8; padding-bottom: 15px; font-size: 1.8rem; font-weight: 700; }
+        .chapter-banner { background: #1e293b; border: 2px solid #2563eb; padding: 20px; border-radius: 8px; margin: 25px 0; text-align: center; font-weight: bold; color: #38bdf8; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { color: #38bdf8; font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; padding-bottom: 5px; }
+        h3 { color: #00ffaa; margin-top: 25px; margin-bottom: 10px; font-size: 1.2rem; font-weight: 600; }
+        p { color: #cbd5e1; margin-bottom: 18px; font-size: 1rem; text-align: justify; }
+        ul, ol { margin-left: 25px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; color: #cbd5e1; font-size: 0.98rem; }
+        .prompt-input { width: 100%; height: 90px; background: #161b26; border: 1px solid #2d3748; border-radius: 6px; color: #fff; padding: 15px; font-size: 1rem; margin-top: 10px; resize: none; }
+        .tips-box { background: #161b26; padding: 15px; border-radius: 6px; border-left: 4px solid #38bdf8; margin-top: 12px; font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; }
+        .tech-cert-panel { background-color: #0f172a; border: 1px solid #1e293b; border-top: 3px solid #2563eb; padding: 35px; border-radius: 8px; text-align: left; margin-top: 40px; }
+        .tech-cert-status { font-family: monospace; color: #2563eb; font-weight: bold; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .tech-cert-title { color: #fff; font-size: 1.5rem; font-weight: 600; margin-bottom: 15px; }
+        .tech-cert-line { height: 1px; background: #1e293b; margin: 20px 0; }
+        .tech-btn { display: block; background-color: #2563eb; color: #fff; font-weight: bold; text-decoration: none; padding: 15px; border-radius: 6px; font-size: 1rem; text-align: center; margin-top: 25px; letter-spacing: 0.5px; }
+        .btn-flex { display: flex; justify-content: space-between; margin-top: 35px; gap: 15px; }
+        .btn-link { display: block; width: 48%; padding: 15px; font-weight: bold; border-radius: 6px; text-decoration: none; text-align: center; font-size: 1rem; background-color: #2d3748; color: #fff; border: 1px solid #4a5568; }
     </style>
 </head>
 <body>
 
     <nav class="nav-bar">
-        <a href="index.html" class="nav-item">Курс 1</a>
-        <a href="page2.html" class="nav-item" style="border-color:#00ffaa;">Курс 2</a>
-        <a href="page3.html" class="nav-item">Курс 3</a>
+        <a href="index.html" class="nav-item">Курс 1 (Текст)</a>
+        <a href="page2.html" class="nav-item">Курс 2 (Графика)</a>
+        <a href="page3.html" class="nav-item" style="border-color:#00ffaa;">Курс 3 (Медиа)</a>
     </nav>
 
     <div class="box">
-        <h1>КУРС 2: Профессиональная Графика и Дизайн (Средний уровень)</h1>
-        
+        <h1>КУРС 3: Кинематографичный Продакшн и Автоматизация (Полная программа)</h1>
+        <p>Высшая ступень обучения ИИ-инженеров. Детальное изучение законов физики движения ИИ-видео, синтеза человеческой речи, генерации музыки и сборки сквозных бизнес-конвейеров.</p>
+
         <!-- ГЛАВА 1 -->
-        <h2>Глава 1. Кинематографичный Дизайн в Midjourney v6</h2>
-        <div class="canvas-pic">MIDJOURNEY_V6 // ГЕНЕРАЦИЯ ВЫСОКОГО РАЗРЕШЕНИЯ</div>
-        <p>Midjourney v6 является индустриальным стандартом для создания сложных художественных иллюстраций, трехмерных концепт-артов и фотореалистичных изображений. Нейросеть полностью имитирует оптику реальных камер. Для достижения коммерческого качества необходимо прописывать параметры света (cinematic lighting, студийное освещение) и фокусные расстояния линз (85mm lens, macro shot).</p>
+        <h2>Глава 1. Физика движения и генерация видео по методу Image-to-Video</h2>
+        <div class="chapter-banner">РАЗДЕЛ 3.0 // ВИДЕО-ЯДРО КИНЕМАТОГРАФИЧНОЙ СИМУЛЯЦИИ</div>
+        <p>Создание видеороликов через флагманские нейросети Kling AI и Runway Gen-3 кардинально отличается от работы с картинками. Эти модели обучаются на миллионах часов реальных видео, выстраивая внутреннюю модель физики мира (как падает свет на ткани, как движется вода и работает гравитация). Если вы напишете обычный текстовый промт прямо в видео-ИИ, модель начнет выдумывать детали на ходу, что приведет к плавающим лицам, поломанным рукам и искажениям пропорций.</p>
+        <p>Профессиональный метод производства видео называется <b>Image-to-Video (Картинка в Видео)</b>. Алгоритм состоит в следующем: сначала вы генерируете идеальный статичный кадр высокого разрешения во Flux или Midjourney (где полностью контролируете композицию и лица). Затем вы загружаете это готовое фото в видео-нейросеть Kling AI. В текстовом поле прописывается исключительно вектор движения камеры и микро-движения (например: slow cinematic zoom in, панорамный сдвиг влево, натуральное движение ветра в волосах). Картинка оживает с идеальным сохранением всех черт лица и предметов сцены.</p>
 
         <!-- ГЛАВА 2 -->
-        <h2>Глава 2. Точное Следование ТЗ и Шрифты во Flux Pro</h2>
-        <div class="canvas-pic" style="background: linear-gradient(135deg, #0d233a, #071524);">FLUX_PRO // ТОЧНАЯ ГЕНЕРАЦИЯ ТЕКСТА</div>
-        <p>В отличие от Midjourney, которая добавляет абстрактный художественный декор, модель Flux Pro создана для точнейшего исполнения инструкций промта. Её главная фишка в коммерческом дизайне — способность без искажений писать печатный текст латиницей прямо на генерируемых объектах (вывесках, коробках товаров, интерфейсах).</p>
+        <h2>Глава 2. Звуковой инжиниринг, клонирование голоса и синтез речи в ElevenLabs</h2>
+        <div class="chapter-banner" style="border-color: #00ffaa;">РАЗДЕЛ 3.1 // СИНТЕЗАТОР РЕЧИ И ЗВУКОВОЙ ДАШБОРД</div>
+        <p>Программа ElevenLabs является мировым эталоном в области технологии Text-to-Speech (Текст в Речь). Нейросеть полностью ушла от монотонного роботизированного звучания прошлых лет: она синтезирует человеческую речь с идеальной расстановкой смысловых акцентов, правильным дыханием, микро-паузами, вздохами и проявлением нужных эмоций (радость, строгость, шепот).</p>
+        <p>Вы можете выбрать готового диктора из огромной библиотеки (например, глубокий мужской баритон для рекламы или мягкий женский голос для аудиокниг) либо использовать функцию клонирования голоса. Загрузив всего 10 секунд чистой аудиозаписи любого человека, ИИ полностью копирует его индивидуальный тембр, интонации и позволяет озвучить этим голосом любой текст на 30 языках мира.</p>
 
         <!-- ГЛАВА 3 -->
-        <h2>Глава 3. Коммерческий Кейс: Карточки Товаров для Маркетплейсов</h2>
-        <p>Создание графики для Wildberries и Ozon требует изоляции объекта и качественного фонового окружения. Использование Flux Pro позволяет сразу внедрять название бренда в изображение флаконов или упаковок.</p>
-        <div class="example-box">
-            <b>Готовый рабочий промт:</b><br>
-            <i>"A luxury glass perfume bottle standing on a polished black marble stone, water splashes, studio dramatic lighting, dark background. On the bottle there is a clear printed text 'ELIXIR'. High-end commercial product photography, hyperrealistic."</i>
-        </div>
+        <h2>Глава 3. Генерация песен, аранжировок и радио-хитов в Suno</h2>
+        <p>Музыкальная нейросеть Suno способна за 30 секунд создать полноценное музыкальное произведение студийного качества с нуля. Система полностью берет на себя роль композитора, аранжировщика, звукорежиссера и вокалиста. Для работы профессионалы используют режим <b>Custom</b>, который разделяет генерацию текста и настройку музыкального стиля.</p>
+        <p>Вы пишете стихи или рекламный слоган в Claude, вставляете текст в специальное поле Suno, а в строке Style прописываете музыкальные теги через запятую (например: synthwave, 1980s стиль, мощные ударные, красивый женский вокал, темп 120 BPM). Нейросеть выдает готовый сведенный трек с идеальным вокалом, который невозможно отличить от работы профессиональной студии записи.</p>
 
         <!-- ГЛАВА 4 -->
-        <h2>Глава 4. Коммерческий Кейс: Разработка Минималистичных Логотипов</h2>
-        <p>При создании логотипов важно указывать ИИ на плоский векторный стиль и чистый изолированный фон, чтобы дизайнер мог легко перенести логотип на сайт или фирменный бланк.</p>
-        <div class="example-box">
-            <b>Готовый рабочий промт:</b><br>
-            <i>"A minimalist vector logo of a coffee cup, clean lines, flat design, black and gold color palette, white solid background, modern graphic design, vector asset Параметр AR 1:1"</i>
-        </div>
+        <h2>Глава 4. Проектирование сквозного мультимодельного ИИ-конвейера</h2>
+        <p>Создание масштабного коммерческого продукта (например, видеорекламы для крупного бренда или контента для блога) никогда не происходит внутри одной нейросети. Профессионал собирает воркфлоу — последовательный конвейер из нескольких специализированных программ, где результат работы одного ИИ передается на вход следующему:</p>
+        <ol>
+            <li><b>Этап 1 (Логика и Сценарий):</b> В текстовой модели Claude пишем покадровый сценарий рекламного ролика и просим выдать английские промты под каждый кадр.</li>
+            <li><b>Этап 2 (Визуализация):</b> Переносим промты во Flux или Midjourney. Создаем серию статичных качественных кадров, используя параметр SREF для удержания фирменных цветов бренда.</li>
+            <li><b>Этап 3 (Анимация):</b> Полученные картинки загружаем в Kling AI в режиме Image-to-Video и оживляем их командами движения камеры.</li>
+            <li><b>Этап 4 (Звуковое сопровождение):</b> Рекламный текст диктора озвучиваем в ElevenLabs, а фоновый трек создаем в Suno. Переносим все куски в любой видеоредактор (например, CapCut), накладываем звук на видео и получаем готовый продукт.</li>
+        </ol>
 
-        <!-- ГЛАВА 5 -->
-        <h2>Глава 5. Синтаксис Параметров Стилизации: AR, SREF и CREF</h2>
-        <p>Управление итоговым результатом происходит через команды-параметры в самом конце запроса:</p>
-        <ul>
-            <li><b>Параметр формата AR 16:9</b> — трансформирует холст в горизонтальный широкоформатный размер под баннеры и веб-сайты.</li>
-            <li><b>Параметр стиля SREF</b> — копирует цветовую палитру, баланс белого и художественную текстуру с любого загруженного изображения-примера от заказчика.</li>
-            <li><b>Параметр персонажа CREF</b> — фиксирует геометрию лица человека, позволяя создавать серии кадров с одним героем в разных сюжетах рекламы.</li>
-        </ul>
-
-        <div class="btn-flex">
-            <a href="index.html" class="btn-link">← Назад в Курс 1</a>
-            <a href="page3.html" class="btn-link" style="background-color:#2563eb; border-color:#2563eb; color:#fff;">В Курс 3 (Видео-Продакшн) →</a>
-        </div>
-    </div>
-</body>
-</html>
+        <!-- ГЛАВА 5 / ПРАКТИКА -->
+        <h2>Глава 5. Выпускной практический практикум: Лабораторный стенд ТЗ</h2>
+        <p>Финальный этап обучения — применение всей пройденной теории на практике. Ознакомьтесь с реальным техническим заданием от коммерческого заказчика и попробуйте составить свой первый рабочий промт в текстовом поле ниже.</p>
+        
+        <div class="quiz" style="background:#161b26; border-color:#38bdf8;">
+            <p style="color:#38bdf8; font-weight:600; margin-bottom:5px;">📋 ТЗ от заказчика:</p>
+            <div class="tips-box">
+                <b>Задача:</b> Создать рекламный баннер для кофейни. На изображении должна быть чашка горячего капучино на деревянном столе, мягкий утренний свет из окна. Формат кадра должен быть широким.
+            </div>
+            <h3 style="margin-top:20px; margin-bottom:5px; color:#fff;">Поле ввода вашего промта:</h3>
+            <textarea class="prompt-input" placeholder="Напишите сюда ваше ТЗ для ИИ. Пример: Профессиональный фотограф, чашка кофе на деревянном столе, утренний свет из окна, параметр стиля SREF, параметр формата AR 16:9..."></textarea>
+            
+            <h3 style="margin-top:20px; color:#00ffaa; font-size:1rem;">💡 Шпаргалка для успешного выполнения:</h3>
+            <ul style="font-size:0.9rem; margin-top:5px;">
+                <li>Задайте Роль эксперта в самом начале запроса (Профессиональный фотограф).</li>
+                <li>Опишите точные детали предметов (чашка капучино, деревянный стол).</li>
+                <li>Впишите текстовое указание на параметр формата AR 16:9 для широкого экрана.</li>
